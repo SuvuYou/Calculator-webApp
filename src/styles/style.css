@@ -1,0 +1,226 @@
+.calculator {
+  height: 400px;
+  margin: auto;
+}
+
+.calculator .monitor {
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #182034;
+  color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.calculator .monitor h1 {
+  display: block;
+}
+
+.calculator .buttons {
+  width: 90%;
+  height: 100%;
+  padding: 5%;
+  background-color: #232c43;
+  margin: auto;
+  border-radius: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
+  gap: 10px;
+  place-content: center;
+  place-items: center;
+}
+
+.calculator .buttons .last-row-first {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5 / 6;
+}
+
+.calculator .buttons .last-row-last {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 5;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5 / 6;
+}
+
+.calculator .buttons .gray-key {
+  background-color: #637097 !important;
+  color: white !important;
+  -webkit-box-shadow: 0px 3px #404e72 !important;
+          box-shadow: 0px 3px #404e72 !important;
+}
+
+.calculator .buttons .red-key {
+  background-color: #d03f2f !important;
+  color: white !important;
+  -webkit-box-shadow: 0px 3px #93261a !important;
+          box-shadow: 0px 3px #93261a !important;
+}
+
+.calculator .buttons .grid-btn {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #eae3dc;
+  -webkit-box-shadow: 0px 3px #b4a597;
+          box-shadow: 0px 3px #b4a597;
+  border-radius: 5px;
+  color: #444b5a;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.calculator .buttons .grid-btn:active {
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.calculator .buttons .grid-btn h1 {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 26px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #3a4764;
+  font-family: "Spartan";
+  font-weight: bold;
+}
+
+.App {
+  min-width: 350px;
+  max-width: 375px;
+  margin: auto;
+}
+
+@media (min-width: 900px) {
+  .App {
+    min-width: 375px;
+    max-width: 500px;
+  }
+}
+
+.header-flex-container {
+  margin: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header-flex-container h1 {
+  color: white;
+}
+
+.toggle-element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.toggle-element > h3 {
+  margin-right: 10px;
+}
+
+.toggle-element h3 {
+  color: white;
+}
+
+.toggle {
+  display: -ms-grid;
+  display: grid;
+  width: 100px;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+
+.toggle .grid-toggle {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.toggle .grid-toggle h3 {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.toggle .toggle-lever {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #182034;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+}
+
+.toggle .toggle-lever::after {
+  content: "";
+  background-color: #182034;
+  width: 30px;
+  height: 25px;
+  position: absolute;
+  border-radius: 50%;
+  left: 30px;
+}
+
+.toggle .toggle-lever::before {
+  content: "";
+  background-color: #182034;
+  width: 30px;
+  height: 25px;
+  position: absolute;
+  border-radius: 50%;
+  right: 30px;
+}
+/*# sourceMappingURL=style.css.map */

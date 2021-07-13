@@ -1,0 +1,102 @@
+@import "calc";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $veryDarkDesaturatedBlueMainBackground;
+  font-family: "Spartan";
+  font-weight: bold;
+}
+
+.App {
+  min-width: 350px;
+  max-width: 375px;
+
+  margin: auto;
+}
+
+@media (min-width: 900px) {
+  .App {
+    min-width: 375px;
+    max-width: 500px;
+  }
+}
+
+.header-flex-container {
+  margin: 5%;
+  display: flex;
+  justify-content: space-between;
+
+  h1 {
+    color: $white;
+  }
+}
+
+.toggle-element {
+  display: flex;
+  align-items: center;
+
+  > h3 {
+    margin-right: 10px;
+  }
+
+  h3 {
+    color: $white;
+  }
+}
+
+.toggle {
+  display: grid;
+  width: 100px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+
+  .grid-toggle {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    h3 {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .toggle-lever {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: $veryDarkDesaturatedBlueScreenBackground;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    &::after {
+      content: "";
+      background-color: $veryDarkDesaturatedBlueScreenBackground;
+      width: 30px;
+      height: 25px;
+      position: absolute;
+      border-radius: 50%;
+      left: 30px;
+    }
+
+    &::before {
+      content: "";
+      background-color: $veryDarkDesaturatedBlueScreenBackground;
+      width: 30px;
+      height: 25px;
+      position: absolute;
+      border-radius: 50%;
+      right: 30px;
+    }
+  }
+}

@@ -1,0 +1,92 @@
+@import "./variables";
+
+.calculator {
+  height: 400px;
+
+  margin: auto;
+  .monitor {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: $veryDarkDesaturatedBlueScreenBackground;
+    color: $white;
+    border-radius: 20px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: row-reverse;
+    h1 {
+      display: block;
+    }
+  }
+
+  .buttons {
+    width: 90%;
+    height: 100%;
+    padding: 5%;
+    background-color: $veryDarkDesaturatedBlueToggleBackground;
+    margin: auto;
+    border-radius: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+    place-content: center;
+    place-items: center;
+
+    .last-row-first {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row: 5 / 6;
+    }
+
+    .last-row-last {
+      grid-column-start: 3;
+      grid-column-end: 5;
+      grid-row: 5 / 6;
+    }
+
+    .gray-key {
+      background-color: $desaturatedDarkBlueKeyBackground !important;
+      color: $white !important;
+      box-shadow: 0px 3px $desaturatedDarkBlueKeyShadow !important;
+    }
+
+    .red-key {
+      background-color: $red !important;
+      color: $white !important;
+      box-shadow: 0px 3px $darkRed !important;
+    }
+
+    .grid-btn {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-color: $lightGrayishOrange;
+      box-shadow: 0px 3px $grayishOrange;
+      border-radius: 5px;
+      color: $veryDarkGrayishBlue;
+      user-select: none;
+
+      &:hover {
+        // background-color: $grayishOrange;
+      }
+
+      &:active {
+        transform: translateY(3px);
+        box-shadow: none !important;
+      }
+
+      h1 {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 26px;
+      }
+    }
+  }
+}
